@@ -155,6 +155,13 @@
   .tailor-points li::before{content:"✓";position:absolute;left:0;top:0;color:var(--blu-medio);font-weight:800;}
   .tailor-example{font-size:0.95rem;color:var(--grigio);margin-bottom:10px;max-width:640px;}
   .tailor-example strong{color:var(--testo-scuro);}
+  .books{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:6px 0 18px;text-align:left;}
+  .book{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:16px;}
+  .book-num{flex:none;width:34px;height:34px;border-radius:50%;background:var(--blu-medio);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;}
+  .book-kind{font-size:0.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#ea580c;margin-bottom:2px;}
+  .book h4{font-size:1.02rem;font-weight:800;color:var(--testo-scuro);margin:0 0 4px;}
+  .book p{font-size:0.88rem;color:#475569;margin:0;}
+  .book h4 .en{font-weight:600;color:#64748b;}
   .tailor-note{font-size:0.85rem;color:var(--grigio);font-style:italic;margin-bottom:0;}
 
   .contact{text-align:center;}
@@ -273,17 +280,17 @@
   <div class="section-inner">
     <div class="eyebrow">Digital publishing</div>
     <h2>A small digital publishing venture</h2>
-    <p>Alongside our apps, Sunvibes Tech Solutions creates practical guides to help families and professionals use technology wisely. They belong to the <strong>Passo Passo</strong> (Step by Step) series: short, concrete, jargon-free, with verifiable sources.</p>
+    <p>Alongside our apps, Sunvibes Tech Solutions creates practical guides to help families and professionals use technology wisely. They belong to the <strong>Step by Step</strong> series (<em>Passo Passo</em> in Italian): short, concrete, jargon-free, with verifiable sources.</p>
     <div class="tailor-card">
-      <span class="tailor-badge">Coming January 2027 on Amazon Kindle (in Italian)</span>
-      <h3>L'IA in famiglia (AI in the Family)</h3>
-      <p>A guide for parents of children and teens aged 6 to 16: how artificial intelligence enters the home, how to talk about it with your kids and which rules to agree on together.</p>
-      <ul class="tailor-points">
-        <li>Family games after every chapter</li>
-        <li>A family digital agreement to sign together</li>
-        <li>Laws and data with verifiable sources</li>
-      </ul>
-      <p class="tailor-note">The free printable kit for readers will be available here when the book is released.</p>
+      <span class="tailor-badge">Coming July 2027 on Amazon Kindle · in English and Italian</span>
+      <h3>Step by Step series · the first 4 ebooks</h3>
+      <div class="books">
+        <div class="book"><div class="book-num">1</div><div><div class="book-kind">Guide for parents</div><h4>AI in the Family</h4><p>Rules, tools and conversations for living with artificial intelligence at home, step by step.</p></div></div>
+        <div class="book"><div class="book-num">2</div><div><div class="book-kind">Essay</div><h4>Dining with AI</h4><p>How artificial intelligence is changing the family.</p></div></div>
+        <div class="book"><div class="book-num">3</div><div><div class="book-kind">Illustrated ebook, ages 6–10</div><h4>Emma and the Talking Machine</h4><p>Artificial intelligence explained for children.</p></div></div>
+        <div class="book"><div class="book-num">4</div><div><div class="book-kind">Guide for travellers</div><h4>Travelling with AI</h4><p>A practical guide to travelling prepared, healthy and safe.</p></div></div>
+      </div>
+      <p class="tailor-note">Italian editions in the Passo Passo series. The free printable kit for readers will be available here when the ebooks are released.</p>
     </div>
   </div>
 </section>

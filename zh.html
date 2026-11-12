@@ -155,6 +155,13 @@
   .tailor-points li::before{content:"✓";position:absolute;left:0;top:0;color:var(--blu-medio);font-weight:800;}
   .tailor-example{font-size:0.95rem;color:var(--grigio);margin-bottom:10px;max-width:640px;}
   .tailor-example strong{color:var(--testo-scuro);}
+  .books{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:6px 0 18px;text-align:left;}
+  .book{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:16px;}
+  .book-num{flex:none;width:34px;height:34px;border-radius:50%;background:var(--blu-medio);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;}
+  .book-kind{font-size:0.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#ea580c;margin-bottom:2px;}
+  .book h4{font-size:1.02rem;font-weight:800;color:var(--testo-scuro);margin:0 0 4px;}
+  .book p{font-size:0.88rem;color:#475569;margin:0;}
+  .book h4 .en{font-weight:600;color:#64748b;}
   .tailor-note{font-size:0.85rem;color:var(--grigio);font-style:italic;margin-bottom:0;}
 
   .contact{text-align:center;}
@@ -275,15 +282,15 @@
     <h2>小型数字出版业务</h2>
     <p>除了应用程序，Sunvibes Tech Solutions 还编写实用指南，帮助家庭和专业人士理性地使用技术。这些指南属于 <strong>Passo Passo</strong>（循序渐进）系列：简短、实用、通俗易懂，并附有可核实的资料来源。</p>
     <div class="tailor-card">
-      <span class="tailor-badge">2027年1月登陆 Amazon Kindle（意大利语版）</span>
-      <h3>L'IA in famiglia（家庭中的人工智能）</h3>
-      <p>一本写给6至16岁孩子家长的指南：人工智能如何进入家庭、如何与孩子谈论它，以及全家如何共同制定规则。</p>
-      <ul class="tailor-points">
-        <li>每章之后都有家庭游戏</li>
-        <li>一份全家共同签署的数字家庭约定</li>
-        <li>法律与数据均附可核实来源</li>
-      </ul>
-      <p class="tailor-note">图书出版后，读者可在此免费下载可打印工具包。</p>
+      <span class="tailor-badge">2027年7月登陆 Amazon Kindle · 意大利语和英语版</span>
+      <h3>Passo Passo 系列 · 首批4本</h3>
+      <div class="books">
+        <div class="book"><div class="book-num">1</div><div><div class="book-kind">家长指南</div><h4>L'AI in famiglia<span class="en"> · AI in the Family</span></h4><p>在家中与人工智能相处的规则、工具与对话，循序渐进。</p></div></div>
+        <div class="book"><div class="book-num">2</div><div><div class="book-kind">随笔</div><h4>A tavola con l'AI<span class="en"> · Dining with AI</span></h4><p>人工智能如何改变家庭。</p></div></div>
+        <div class="book"><div class="book-num">3</div><div><div class="book-kind">绘本，6–10岁</div><h4>Emma e la macchina che parla<span class="en"> · Emma and the Talking Machine</span></h4><p>讲给孩子听的人工智能。</p></div></div>
+        <div class="book"><div class="book-num">4</div><div><div class="book-kind">旅行者指南</div><h4>In viaggio con l'AI<span class="en"> · Travelling with AI</span></h4><p>做好准备、健康出行、避免意外的实用指南。</p></div></div>
+      </div>
+      <p class="tailor-note">供读者免费下载的可打印资料包将在图书出版后在此提供。</p>
     </div>
   </div>
 </section>

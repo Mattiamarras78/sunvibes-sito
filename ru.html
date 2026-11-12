@@ -155,6 +155,13 @@
   .tailor-points li::before{content:"✓";position:absolute;left:0;top:0;color:var(--blu-medio);font-weight:800;}
   .tailor-example{font-size:0.95rem;color:var(--grigio);margin-bottom:10px;max-width:640px;}
   .tailor-example strong{color:var(--testo-scuro);}
+  .books{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:6px 0 18px;text-align:left;}
+  .book{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:16px;}
+  .book-num{flex:none;width:34px;height:34px;border-radius:50%;background:var(--blu-medio);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;}
+  .book-kind{font-size:0.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#ea580c;margin-bottom:2px;}
+  .book h4{font-size:1.02rem;font-weight:800;color:var(--testo-scuro);margin:0 0 4px;}
+  .book p{font-size:0.88rem;color:#475569;margin:0;}
+  .book h4 .en{font-weight:600;color:#64748b;}
   .tailor-note{font-size:0.85rem;color:var(--grigio);font-style:italic;margin-bottom:0;}
 
   .contact{text-align:center;}
@@ -275,15 +282,15 @@
     <h2>Небольшое цифровое издательское направление</h2>
     <p>Помимо приложений, Sunvibes Tech Solutions создаёт практические руководства, которые помогают семьям и специалистам осознанно пользоваться технологиями. Они выходят в серии <strong>Passo Passo</strong> («Шаг за шагом»): коротко, конкретно, без сложных терминов и с проверяемыми источниками.</p>
     <div class="tailor-card">
-      <span class="tailor-badge">В январе 2027 года на Amazon Kindle (на итальянском языке)</span>
-      <h3>L'IA in famiglia («ИИ в семье»)</h3>
-      <p>Руководство для родителей детей и подростков от 6 до 16 лет: как искусственный интеллект приходит в дом, как говорить о нём с детьми и какие правила установить вместе.</p>
-      <ul class="tailor-points">
-        <li>Семейные игры после каждой главы</li>
-        <li>Цифровой семейный договор, который подписывают все вместе</li>
-        <li>Законы и данные с проверяемыми источниками</li>
-      </ul>
-      <p class="tailor-note">Бесплатный набор для печати для читателей появится здесь после выхода книги.</p>
+      <span class="tailor-badge">Выход — июль 2027 года на Amazon Kindle · на итальянском и английском</span>
+      <h3>Серия Passo Passo · первые 4 книги</h3>
+      <div class="books">
+        <div class="book"><div class="book-num">1</div><div><div class="book-kind">Руководство для родителей</div><h4>L'AI in famiglia<span class="en"> · AI in the Family</span></h4><p>Правила, инструменты и разговоры о том, как жить с искусственным интеллектом дома, шаг за шагом.</p></div></div>
+        <div class="book"><div class="book-num">2</div><div><div class="book-kind">Эссе</div><h4>A tavola con l'AI<span class="en"> · Dining with AI</span></h4><p>Как искусственный интеллект меняет семью.</p></div></div>
+        <div class="book"><div class="book-num">3</div><div><div class="book-kind">Иллюстрированная книга, 6–10 лет</div><h4>Emma e la macchina che parla<span class="en"> · Emma and the Talking Machine</span></h4><p>Искусственный интеллект простыми словами для детей.</p></div></div>
+        <div class="book"><div class="book-num">4</div><div><div class="book-kind">Руководство для путешественников</div><h4>In viaggio con l'AI<span class="en"> · Travelling with AI</span></h4><p>Практическое руководство: путешествовать подготовленными, здоровыми и без неприятных сюрпризов.</p></div></div>
+      </div>
+      <p class="tailor-note">Бесплатный набор материалов для печати появится здесь после выхода книг.</p>
     </div>
   </div>
 </section>
