@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunvibes Tech Solutions</title>
+<meta name="description" content="Sunvibes Tech Solutions — sviluppiamo app utili, a partire da Pronto? Soccorso Vicino.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sunvibestechsolutions.com/">
+<meta property="og:title" content="Sunvibes Tech Solutions">
+<meta property="og:description" content="Sviluppiamo app utili, pensate per risolvere un problema reale — a partire da Pronto? Soccorso Vicino.">
+<meta property="og:image" content="https://sunvibestechsolutions.com/assets/og_image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sunvibes Tech Solutions">
+<meta name="twitter:description" content="Sviluppiamo app utili, pensate per risolvere un problema reale — a partire da Pronto? Soccorso Vicino.">
+<meta name="twitter:image" content="https://sunvibestechsolutions.com/assets/og_image.jpg">
+<link rel="icon" type="image/png" href="assets/sunvibes_asterisk_icon_32.png">
+<link rel="apple-touch-icon" href="assets/sunvibes_asterisk_icon_180.png">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="5504b500-9f07-4e18-a834-a30851ed9ef7"></script>
+<style>
+  :root{
+    --cielo:#7dd3fc;
+    --blu-medio:#2563eb;
+    --mare:#0c4a6e;
+    --arancio:#ea580c;
+    --bianco:#ffffff;
+    --azzurro-chiaro:#dbeafe;
+    --testo-scuro:#0f172a;
+    --grigio:#64748b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--testo-scuro);
+    line-height:1.55;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid #e2e8f0;
+  }
+  .nav{
+    max-width:1080px;margin:0 auto;padding:14px 24px;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.05rem;color:var(--mare);}
+  .brand img{width:34px;height:34px;border-radius:9px;}
+  .nav-links{display:flex;gap:28px;font-weight:600;font-size:0.95rem;color:var(--grigio);}
+  .nav-links a:hover{color:var(--blu-medio);}
+  .nav-right{display:flex;align-items:center;gap:22px;}
+  .lang-switch{display:flex;gap:6px;align-items:center;}
+  .lang-switch a{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:30px;height:30px;border-radius:8px;opacity:.55;filter:grayscale(35%);
+    transition:opacity .15s ease, filter .15s ease, background .15s ease;
+  }
+  .lang-switch a img{
+    width:20px;height:15px;border-radius:3px;object-fit:cover;display:block;
+    box-shadow:0 0 0 1px rgba(15,23,42,0.14);
+  }
+  .lang-switch a:hover{opacity:1;filter:none;}
+  .lang-switch a.active{opacity:1;filter:none;background:var(--azzurro-chiaro);}
+
+  .hero{
+    position:relative;
+    overflow:hidden;
+    background:#171310;
+    color:#fff;
+    aspect-ratio:1.6;
+    min-height:420px;
+    max-height:1000px;
+  }
+  .hero .hero-bg{
+    position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;object-position:center;z-index:0;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(1,8,4,0.05) 0%, rgba(1,8,4,0) 32%, rgba(1,8,4,0.38) 68%, rgba(1,8,4,0.85) 100%);
+    z-index:1;
+  }
+  .hero canvas{position:absolute;inset:0;width:100%;height:100%;z-index:2;opacity:0.28;}
+
+  .hero-content{
+    position:absolute;left:0;right:0;bottom:0;z-index:3;
+    padding:28px 32px 34px;text-align:left;
+  }
+  .hero-content .logo-plate{
+    width:72px;height:72px;background:#fff;border-radius:18px;
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:16px;
+    box-shadow:0 8px 24px rgba(0,0,0,0.35);
+  }
+  .hero-content .logo-plate img{width:52px;height:52px;border-radius:12px;}
+  .hero-content h1{font-size:2rem;font-weight:800;margin-bottom:10px;letter-spacing:-0.02em;}
+  .hero-content p.tagline{font-size:1.05rem;color:#d9fbe4;max-width:480px;margin-bottom:22px;}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;padding:13px 28px;border-radius:999px;font-weight:700;
+    font-size:0.98rem;transition:transform .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--arancio);color:#fff;box-shadow:0 8px 20px rgba(234,88,12,0.35);}
+  .btn-secondary{background:rgba(255,255,255,0.16);color:#fff;border:1.5px solid rgba(255,255,255,0.55);}
+
+  section{padding:76px 24px;}
+  .section-inner{max-width:1080px;margin:0 auto;}
+  .eyebrow{
+    text-transform:uppercase;letter-spacing:0.08em;font-size:0.8rem;font-weight:700;
+    color:var(--arancio);margin-bottom:10px;
+  }
+  h2{font-size:1.9rem;font-weight:800;color:var(--mare);margin-bottom:18px;letter-spacing:-0.01em;}
+
+  .about p{max-width:680px;color:#334155;font-size:1.05rem;margin-bottom:14px;}
+
+  .products{background:#f8fafc;}
+  .product-card{
+    background:#fff;border-radius:20px;padding:36px;
+    box-shadow:0 4px 20px rgba(15,23,42,0.06);
+    display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;
+    border:1px solid #e2e8f0;
+  }
+  .product-card img{width:88px;height:88px;border-radius:20px;}
+  .product-card .content{display:flex;flex-direction:column;align-items:center;max-width:520px;}
+  .product-card h3{font-size:1.35rem;font-weight:800;color:var(--testo-scuro);margin-bottom:8px;}
+  .product-card p{color:var(--grigio);margin-bottom:16px;max-width:520px;}
+  .badge-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;justify-content:center;}
+  .badge{
+    font-size:0.78rem;font-weight:700;padding:5px 12px;border-radius:999px;
+    background:var(--azzurro-chiaro);color:var(--blu-medio);
+  }
+  .badge.soon{background:#fef3c7;color:#92400e;}
+  .product-card .btn-primary{padding:10px 22px;font-size:0.9rem;}
+  .tailor-card{
+    margin-top:26px;padding:34px 36px;border-radius:20px;
+    background:linear-gradient(135deg, var(--azzurro-chiaro) 0%, #ffffff 65%);
+    border:1px solid #e2e8f0;
+    display:flex;flex-direction:column;align-items:center;text-align:center;
+  }
+  .tailor-badge{
+    display:inline-block;font-size:0.78rem;font-weight:700;padding:5px 12px;border-radius:999px;
+    background:#fef3c7;color:#92400e;margin-bottom:14px;
+  }
+  .tailor-card h3{font-size:1.3rem;font-weight:800;color:var(--testo-scuro);margin-bottom:12px;letter-spacing:-0.01em;}
+  .tailor-card p{color:#334155;font-size:0.98rem;margin-bottom:14px;max-width:640px;}
+  .tailor-points{list-style:none;margin:4px 0 18px;padding:0;display:flex;flex-direction:column;gap:8px;align-items:flex-start;}
+  .tailor-points li{position:relative;padding-left:26px;color:var(--testo-scuro);font-weight:700;font-size:0.92rem;text-align:left;}
+  .tailor-points li::before{content:"✓";position:absolute;left:0;top:0;color:var(--blu-medio);font-weight:800;}
+  .tailor-example{font-size:0.95rem;color:var(--grigio);margin-bottom:10px;max-width:640px;}
+  .tailor-example strong{color:var(--testo-scuro);}
+  .books{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:6px 0 18px;text-align:left;}
+  .book{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:16px;}
+  .book-num{flex:none;width:34px;height:34px;border-radius:50%;background:var(--blu-medio);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;}
+  .book-kind{font-size:0.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#ea580c;margin-bottom:2px;}
+  .book h4{font-size:1.02rem;font-weight:800;color:var(--testo-scuro);margin:0 0 4px;}
+  .book p{font-size:0.88rem;color:#475569;margin:0;}
+  .tailor-note{font-size:0.85rem;color:var(--grigio);font-style:italic;margin-bottom:0;}
+
+  .contact{text-align:center;}
+  .contact .email-btn{
+    display:inline-block;margin-top:8px;font-size:1.1rem;font-weight:700;
+    color:var(--blu-medio);border-bottom:2px solid var(--azzurro-chiaro);padding-bottom:2px;
+  }
+  .socials{display:flex;gap:16px;justify-content:center;margin-top:30px;flex-wrap:wrap;}
+  .social-pill{
+    display:flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;
+    background:#f1f5f9;color:var(--grigio);font-size:0.88rem;font-weight:600;
+  }
+  a.social-pill{color:var(--blu-medio);text-decoration:none;transition:background .2s,color .2s;}
+  a.social-pill:hover{background:var(--blu-medio);color:#fff;}
+
+  footer{
+    background:var(--mare);color:var(--azzurro-chiaro);
+    padding:34px 24px;text-align:center;font-size:0.85rem;
+  }
+  footer a{text-decoration:underline;}
+
+  @media (max-width:640px){
+    .nav-links{display:none;}
+    .hero{aspect-ratio:1.05;min-height:380px;}
+    .hero-content h1{font-size:1.6rem;}
+    .hero-content p.tagline{font-size:0.95rem;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">
+      <img src="assets/sunvibes_asterisk_icon_64.png" alt="Sunvibes Tech Solutions">
+      Sunvibes Tech Solutions
+    </div>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="#chi-siamo">Chi siamo</a>
+        <a href="#prodotti">Prodotti</a>
+        <a href="#editoria">Editoria</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+      <div class="lang-switch">
+        <a href="index.html" class="active" title="Italiano" aria-label="Italiano" lang="it"><img src="assets/flags/it.svg" alt="Italiano"></a>
+        <a href="en.html" title="English" aria-label="English" lang="en"><img src="assets/flags/gb.svg" alt="English"></a>
+        <a href="es.html" title="Español" aria-label="Español" lang="es"><img src="assets/flags/es.svg" alt="Español"></a>
+        <a href="zh.html" title="中文" aria-label="中文" lang="zh"><img src="assets/flags/cn.svg" alt="中文"></a>
+        <a href="ru.html" title="Русский" aria-label="Русский" lang="ru"><img src="assets/flags/ru.svg" alt="Русский"></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <img class="hero-bg" src="assets/hero_sunset_wide.jpg" alt="Tramonto sul mare, sole e figura in silhouette">
+  <canvas id="matrix-rain"></canvas>
+  <div class="hero-content">
+    <div class="logo-plate">
+      <img src="assets/sunvibes_asterisk_transparent_1024.png" alt="Logo Sunvibes Tech Solutions">
+    </div>
+    <h1>Sunvibes Tech Solutions</h1>
+    <p class="tagline">Sviluppiamo app utili, pensate per risolvere un problema reale — a partire da Pronto? Soccorso Vicino.</p>
+    <div class="cta-row">
+      <a href="#prodotti" class="btn btn-primary">Scopri i prodotti</a>
+      <a href="#contatti" class="btn btn-secondary">Contattaci</a>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="chi-siamo">
+  <div class="section-inner">
+    <div class="eyebrow">Chi siamo</div>
+    <h2>Un'idea semplice, portata avanti sul serio</h2>
+    <p>Sunvibes Tech Solutions nasce per sviluppare applicazioni utili nella vita e nel lavoro di tutti i giorni, con un'attenzione particolare alla salute, all'assistenza e alla creazione di soluzioni su misura, pensate attorno alle esigenze specifiche di ogni professionista o azienda.</p>
+    <p>Il nostro fondatore ha una laurea in psicologia clinica e un percorso tra la sperimentazione clinica in aziende internazionali del settore farmaceutico e il sistema sanitario pubblico, in Italia e all'estero. Unisce la conoscenza delle persone e dei loro bisogni a quella della tecnologia — un'esperienza che ha portato dritta nel primo prodotto: un modo semplice per trovare il pronto soccorso più vicino, ovunque ci si trovi.</p>
+    <p>Il primo prodotto è <strong>Pronto? Soccorso Vicino</strong>. Altri arriveranno, con lo stesso principio: fare bene una cosa utile, prima di prometterne dieci.</p>
+  </div>
+</section>
+
+<section class="products" id="prodotti">
+  <div class="section-inner">
+    <div class="eyebrow">Prodotti</div>
+    <h2>Cosa abbiamo costruito finora</h2>
+
+    <div class="product-card">
+      <img src="assets/icona_app_512x512.png" alt="Pronto? Soccorso Vicino">
+      <div class="content">
+        <div class="badge-row">
+          <span class="badge">Gratuita</span>
+          <span class="badge soon">App su store — in arrivo</span>
+        </div>
+        <h3>Pronto? Soccorso Vicino</h3>
+        <p>Trova il pronto soccorso più vicino — umano e veterinario — in tutta Italia, con distanze, tempi stimati e indicazioni stradali. Include anche una sezione Premium per professionisti sanitari e un Kit Viaggio per chi si trova all'estero o è di passaggio in Italia.</p>
+        <a href="https://landing.sunvibestechsolutions.com" class="btn btn-primary" target="_blank" rel="noopener">Scopri l'app</a>
+      </div>
+    </div>
+
+    <div class="tailor-card">
+      <span class="tailor-badge">In arrivo</span>
+      <h3>Il lavoro complicato, ridotto a un click</h3>
+      <p>Ogni studio, ogni azienda ha un modo tutto suo di lavorare — e un software pensato per andare bene a tutti, spesso, non lo asseconda: lo complica. Costruiamo gestionali e app su misura attorno a come lavori davvero tu, dalla tua idea di partenza fino alle esigenze a cui non avevi ancora pensato. Non un vestito preso dallo scaffale e adattato alla bell'e meglio: un abito sartoriale, cucito sulla tua misura.</p>
+      <ul class="tailor-points">
+        <li>Costruito attorno al tuo modo di lavorare, non il contrario</li>
+        <li>Un click al posto di dieci passaggi manuali</li>
+        <li>Pensato anche per esigenze a cui non avevi ancora pensato</li>
+      </ul>
+      <p class="tailor-example"><strong>Un esempio concreto:</strong> un sistema di prenotazione appuntamenti per uno studio medico o un'azienda di vendita, che trasforma una gestione oggi macchinosa in un'operazione di un click. <strong>Un altro esempio:</strong> un'app clienti (o un gestionale interno) per farmacie, per prenotare il ritiro dei farmaci, mandare promemoria automatici e restare in contatto con chi si affida a te ogni giorno.</p>
+      <p class="tailor-note">Questa sezione si aggiornerà quando i primi progetti saranno pronti.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="editoria">
+  <div class="section-inner">
+    <div class="eyebrow">Editoria digitale</div>
+    <h2>Una piccola attività editoriale digitale</h2>
+    <p>Accanto alle app, Sunvibes Tech Solutions realizza guide pratiche per aiutare famiglie e professionisti a vivere la tecnologia in modo consapevole. Le guide fanno parte della collana <strong>Passo Passo</strong>: brevi, concrete, senza tecnicismi, con fonti verificabili.</p>
+    <div class="tailor-card">
+      <span class="tailor-badge">In arrivo — luglio 2027 su Amazon Kindle</span>
+      <h3>Collana Passo Passo · i primi 4 volumi</h3>
+      <div class="books">
+        <div class="book"><div class="book-num">1</div><div><div class="book-kind">Guida per genitori</div><h4>L'AI in famiglia</h4><p>Regole, strumenti e conversazioni per vivere l'intelligenza artificiale in casa, passo passo.</p></div></div>
+        <div class="book"><div class="book-num">2</div><div><div class="book-kind">Saggio</div><h4>A tavola con l'AI</h4><p>Come l'intelligenza artificiale sta cambiando la famiglia.</p></div></div>
+        <div class="book"><div class="book-num">3</div><div><div class="book-kind">Libro illustrato, 6–10 anni</div><h4>Emma e la macchina che parla</h4><p>L'intelligenza artificiale spiegata ai bambini.</p></div></div>
+        <div class="book"><div class="book-num">4</div><div><div class="book-kind">Guida per viaggiatori</div><h4>In viaggio con l'AI</h4><p>Guida pratica per partire preparati, in salute e senza brutte sorprese.</p></div></div>
+      </div>
+      <p class="tailor-note">Anche in inglese, nella collana Step by Step.</p>
+      <div class="signup" id="avvisami">
+        <iframe title="Iscriviti: avvisami all'uscita" width="540" height="760" src="https://1fd55a99.sibforms.com/v2/serve/MUIFAOnvmhbAQ6yYl9YcZojN_pny9wibT6yyZaUeV6cExOnzSEMa9TOZiwGOCAGqTFyPb9X5Ycl2Av3t-R0aAggp4Ix_tw8cFxTBetBSraXjQ1JKrEyut6RYw_qL-_ek5Gh6NeionNR-LGSWL50hPCa03UA9IxN78rNa4ar68GcVTFiJbtE7DTTT6gTYI71rW1kTsT0upWcjLaaGmw==" frameborder="0" scrolling="auto" allowfullscreen loading="lazy" style="display:block;margin:18px auto 0;max-width:100%;border:0;border-radius:14px;"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contatti">
+  <div class="section-inner">
+    <div class="eyebrow">Contatti</div>
+    <h2>Parliamone</h2>
+    <p style="color:var(--grigio);max-width:480px;margin:0 auto;">Per domande, collaborazioni o segnalazioni, scrivici via email.</p>
+    <a href="mailto:info@sunvibestechsolutions.com" class="email-btn">info@sunvibestechsolutions.com</a>
+    <div class="socials">
+      <a class="social-pill" href="https://www.instagram.com/sunvibestechsolutions/" target="_blank" rel="noopener">Instagram</a>
+      <a class="social-pill" href="https://www.facebook.com/share/1Rav3YoLNh/" target="_blank" rel="noopener">Facebook</a>
+      <a class="social-pill" href="https://www.linkedin.com/company/145425853/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="social-pill" href="https://www.youtube.com/@sunvibestechsolutions" target="_blank" rel="noopener">YouTube</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 Sunvibes Tech Solutions — <a href="mailto:info@sunvibestechsolutions.com">info@sunvibestechsolutions.com</a> · <a href="privacy.html">Privacy</a></div>
+</footer>
+
+<script>
+(function(){
+  var canvas = document.getElementById('matrix-rain');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var hero = canvas.closest('.hero');
+  var chars = 'アイウエオカキクケコサシスセソタチツテトナニヌネノ0123456789';
+  chars = chars.split('');
+  var fontSize = 16;
+  var columns, drops;
+
+  function resize(){
+    var w = hero.clientWidth, h = hero.clientHeight;
+    canvas.width = w * devicePixelRatio;
+    canvas.height = h * devicePixelRatio;
+    canvas.style.width = w + 'px';
+    canvas.style.height = h + 'px';
+    ctx.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
+    columns = Math.floor(w / fontSize);
+    drops = new Array(columns).fill(0).map(function(){ return Math.random() * -50; });
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  function draw(){
+    var w = canvas.width / devicePixelRatio, h = canvas.height / devicePixelRatio;
+    ctx.fillStyle = 'rgba(1,8,4,0.14)';
+    ctx.fillRect(0, 0, w, h);
+    ctx.font = fontSize + 'px monospace';
+    for (var i = 0; i < columns; i++){
+      var text = chars[Math.floor(Math.random() * chars.length)];
+      var x = i * fontSize;
+      var y = drops[i] * fontSize;
+      ctx.fillStyle = Math.random() > 0.94 ? '#d9fbe4' : '#3ddc72';
+      ctx.fillText(text, x, y);
+      if (y > h && Math.random() > 0.975){
+        drops[i] = 0;
+      }
+      drops[i]++;
+    }
+  }
+
+  var interval = setInterval(draw, 55);
+
+  // rispetta chi preferisce meno animazioni
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    clearInterval(interval);
+    canvas.style.display = 'none';
+  }
+})();
+</script>
+
+</body>
+</html>

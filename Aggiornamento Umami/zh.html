@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunvibes Tech Solutions</title>
+<meta name="description" content="Sunvibes Tech Solutions — 我们开发实用的应用程序，从 Pronto? Soccorso Vicino 开始。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sunvibestechsolutions.com/zh.html">
+<meta property="og:title" content="Sunvibes Tech Solutions">
+<meta property="og:description" content="我们开发实用的应用程序，致力于解决真实的问题——从 Pronto? Soccorso Vicino 开始。">
+<meta property="og:image" content="https://sunvibestechsolutions.com/assets/og_image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sunvibes Tech Solutions">
+<meta name="twitter:description" content="我们开发实用的应用程序，致力于解决真实的问题——从 Pronto? Soccorso Vicino 开始。">
+<meta name="twitter:image" content="https://sunvibestechsolutions.com/assets/og_image.jpg">
+<link rel="icon" type="image/png" href="assets/sunvibes_asterisk_icon_32.png">
+<link rel="apple-touch-icon" href="assets/sunvibes_asterisk_icon_180.png">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="5504b500-9f07-4e18-a834-a30851ed9ef7"></script>
+<style>
+  :root{
+    --cielo:#7dd3fc;
+    --blu-medio:#2563eb;
+    --mare:#0c4a6e;
+    --arancio:#ea580c;
+    --bianco:#ffffff;
+    --azzurro-chiaro:#dbeafe;
+    --testo-scuro:#0f172a;
+    --grigio:#64748b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--testo-scuro);
+    line-height:1.7;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid #e2e8f0;
+  }
+  .nav{
+    max-width:1080px;margin:0 auto;padding:14px 24px;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.05rem;color:var(--mare);}
+  .brand img{width:34px;height:34px;border-radius:9px;}
+  .nav-links{display:flex;gap:28px;font-weight:600;font-size:0.95rem;color:var(--grigio);}
+  .nav-links a:hover{color:var(--blu-medio);}
+  .nav-right{display:flex;align-items:center;gap:22px;}
+  .lang-switch{display:flex;gap:6px;align-items:center;}
+  .lang-switch a{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:30px;height:30px;border-radius:8px;opacity:.55;filter:grayscale(35%);
+    transition:opacity .15s ease, filter .15s ease, background .15s ease;
+  }
+  .lang-switch a img{
+    width:20px;height:15px;border-radius:3px;object-fit:cover;display:block;
+    box-shadow:0 0 0 1px rgba(15,23,42,0.14);
+  }
+  .lang-switch a:hover{opacity:1;filter:none;}
+  .lang-switch a.active{opacity:1;filter:none;background:var(--azzurro-chiaro);}
+
+  .hero{
+    position:relative;
+    overflow:hidden;
+    background:#171310;
+    color:#fff;
+    aspect-ratio:1.6;
+    min-height:420px;
+    max-height:1000px;
+  }
+  .hero .hero-bg{
+    position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;object-position:center;z-index:0;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(1,8,4,0.05) 0%, rgba(1,8,4,0) 32%, rgba(1,8,4,0.38) 68%, rgba(1,8,4,0.85) 100%);
+    z-index:1;
+  }
+  .hero canvas{position:absolute;inset:0;width:100%;height:100%;z-index:2;opacity:0.28;}
+
+  .hero-content{
+    position:absolute;left:0;right:0;bottom:0;z-index:3;
+    padding:28px 32px 34px;text-align:left;
+  }
+  .hero-content .logo-plate{
+    width:72px;height:72px;background:#fff;border-radius:18px;
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:16px;
+    box-shadow:0 8px 24px rgba(0,0,0,0.35);
+  }
+  .hero-content .logo-plate img{width:52px;height:52px;border-radius:12px;}
+  .hero-content h1{font-size:2rem;font-weight:800;margin-bottom:10px;letter-spacing:-0.01em;}
+  .hero-content p.tagline{font-size:1.05rem;color:#d9fbe4;max-width:480px;margin-bottom:22px;}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;padding:13px 28px;border-radius:999px;font-weight:700;
+    font-size:0.98rem;transition:transform .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--arancio);color:#fff;box-shadow:0 8px 20px rgba(234,88,12,0.35);}
+  .btn-secondary{background:rgba(255,255,255,0.16);color:#fff;border:1.5px solid rgba(255,255,255,0.55);}
+
+  section{padding:76px 24px;}
+  .section-inner{max-width:1080px;margin:0 auto;}
+  .eyebrow{
+    text-transform:uppercase;letter-spacing:0.08em;font-size:0.8rem;font-weight:700;
+    color:var(--arancio);margin-bottom:10px;
+  }
+  h2{font-size:1.9rem;font-weight:800;color:var(--mare);margin-bottom:18px;letter-spacing:-0.01em;}
+
+  .about p{max-width:680px;color:#334155;font-size:1.05rem;margin-bottom:14px;}
+
+  .products{background:#f8fafc;}
+  .product-card{
+    background:#fff;border-radius:20px;padding:36px;
+    box-shadow:0 4px 20px rgba(15,23,42,0.06);
+    display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;
+    border:1px solid #e2e8f0;
+  }
+  .product-card img{width:88px;height:88px;border-radius:20px;}
+  .product-card .content{display:flex;flex-direction:column;align-items:center;max-width:520px;}
+  .product-card h3{font-size:1.35rem;font-weight:800;color:var(--testo-scuro);margin-bottom:8px;}
+  .product-card p{color:var(--grigio);margin-bottom:16px;max-width:520px;}
+  .badge-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;justify-content:center;}
+  .badge{
+    font-size:0.78rem;font-weight:700;padding:5px 12px;border-radius:999px;
+    background:var(--azzurro-chiaro);color:var(--blu-medio);
+  }
+  .badge.soon{background:#fef3c7;color:#92400e;}
+  .product-card .btn-primary{padding:10px 22px;font-size:0.9rem;}
+  .tailor-card{
+    margin-top:26px;padding:34px 36px;border-radius:20px;
+    background:linear-gradient(135deg, var(--azzurro-chiaro) 0%, #ffffff 65%);
+    border:1px solid #e2e8f0;
+    display:flex;flex-direction:column;align-items:center;text-align:center;
+  }
+  .tailor-badge{
+    display:inline-block;font-size:0.78rem;font-weight:700;padding:5px 12px;border-radius:999px;
+    background:#fef3c7;color:#92400e;margin-bottom:14px;
+  }
+  .tailor-card h3{font-size:1.3rem;font-weight:800;color:var(--testo-scuro);margin-bottom:12px;letter-spacing:-0.01em;}
+  .tailor-card p{color:#334155;font-size:0.98rem;margin-bottom:14px;max-width:640px;}
+  .tailor-points{list-style:none;margin:4px 0 18px;padding:0;display:flex;flex-direction:column;gap:8px;align-items:flex-start;}
+  .tailor-points li{position:relative;padding-left:26px;color:var(--testo-scuro);font-weight:700;font-size:0.92rem;text-align:left;}
+  .tailor-points li::before{content:"✓";position:absolute;left:0;top:0;color:var(--blu-medio);font-weight:800;}
+  .tailor-example{font-size:0.95rem;color:var(--grigio);margin-bottom:10px;max-width:640px;}
+  .tailor-example strong{color:var(--testo-scuro);}
+  .books{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:6px 0 18px;text-align:left;}
+  .book{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:16px;}
+  .book-num{flex:none;width:34px;height:34px;border-radius:50%;background:var(--blu-medio);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;}
+  .book-kind{font-size:0.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#ea580c;margin-bottom:2px;}
+  .book h4{font-size:1.02rem;font-weight:800;color:var(--testo-scuro);margin:0 0 4px;}
+  .book p{font-size:0.88rem;color:#475569;margin:0;}
+  .book h4 .en{font-weight:600;color:#64748b;}
+  .tailor-note{font-size:0.85rem;color:var(--grigio);font-style:italic;margin-bottom:0;}
+
+  .contact{text-align:center;}
+  .contact .email-btn{
+    display:inline-block;margin-top:8px;font-size:1.1rem;font-weight:700;
+    color:var(--blu-medio);border-bottom:2px solid var(--azzurro-chiaro);padding-bottom:2px;
+  }
+  .socials{display:flex;gap:16px;justify-content:center;margin-top:30px;flex-wrap:wrap;}
+  .social-pill{
+    display:flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;
+    background:#f1f5f9;color:var(--grigio);font-size:0.88rem;font-weight:600;
+  }
+  a.social-pill{color:var(--blu-medio);text-decoration:none;transition:background .2s,color .2s;}
+  a.social-pill:hover{background:var(--blu-medio);color:#fff;}
+
+  footer{
+    background:var(--mare);color:var(--azzurro-chiaro);
+    padding:34px 24px;text-align:center;font-size:0.85rem;
+  }
+  footer a{text-decoration:underline;}
+
+  @media (max-width:640px){
+    .nav-links{display:none;}
+    .hero{aspect-ratio:1.05;min-height:380px;}
+    .hero-content h1{font-size:1.6rem;}
+    .hero-content p.tagline{font-size:0.95rem;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">
+      <img src="assets/sunvibes_asterisk_icon_64.png" alt="Sunvibes Tech Solutions">
+      Sunvibes Tech Solutions
+    </div>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="#about">关于我们</a>
+        <a href="#products">产品</a>
+        <a href="#publishing">出版</a>
+        <a href="#contact">联系我们</a>
+      </nav>
+      <div class="lang-switch">
+        <a href="index.html" title="Italiano" aria-label="Italiano" lang="it"><img src="assets/flags/it.svg" alt="Italiano"></a>
+        <a href="en.html" title="English" aria-label="English" lang="en"><img src="assets/flags/gb.svg" alt="English"></a>
+        <a href="es.html" title="Español" aria-label="Español" lang="es"><img src="assets/flags/es.svg" alt="Español"></a>
+        <a href="zh.html" class="active" title="中文" aria-label="中文" lang="zh"><img src="assets/flags/cn.svg" alt="中文"></a>
+        <a href="ru.html" title="Русский" aria-label="Русский" lang="ru"><img src="assets/flags/ru.svg" alt="Русский"></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <img class="hero-bg" src="assets/hero_sunset_wide.jpg" alt="海上日落，太阳与人影剪影">
+  <canvas id="matrix-rain"></canvas>
+  <div class="hero-content">
+    <div class="logo-plate">
+      <img src="assets/sunvibes_asterisk_transparent_1024.png" alt="Sunvibes Tech Solutions 标志">
+    </div>
+    <h1>Sunvibes Tech Solutions</h1>
+    <p class="tagline">我们开发实用的应用程序，致力于解决真实的问题——从 Pronto? Soccorso Vicino 开始。</p>
+    <div class="cta-row">
+      <a href="#products" class="btn btn-primary">了解我们的产品</a>
+      <a href="#contact" class="btn btn-secondary">联系我们</a>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="section-inner">
+    <div class="eyebrow">关于我们</div>
+    <h2>一个简单的想法，认真去实现</h2>
+    <p>Sunvibes Tech Solutions 致力于开发日常生活和日常工作中实用的应用程序，尤其关注健康、护理，以及围绕每位专业人士或企业的具体需求打造的定制化解决方案。</p>
+    <p>我们的创始人拥有临床心理学学位，曾在国际制药公司从事临床研究工作，也曾在意大利及海外的公共医疗系统工作。他将对人及其需求的理解与技术相结合——这段经历直接催生了我们的第一款产品：一种随时随地都能轻松找到最近急诊室的方法。</p>
+    <p>我们的第一款产品是 <strong>Pronto? Soccorso Vicino</strong>（意为"紧急情况？附近援助"）。未来还会推出更多产品，秉持同样的原则：先把一件有用的事做好，而不是许诺十件事。</p>
+  </div>
+</section>
+
+<section class="products" id="products">
+  <div class="section-inner">
+    <div class="eyebrow">产品</div>
+    <h2>我们目前已经开发的产品</h2>
+
+    <div class="product-card">
+      <img src="assets/icona_app_512x512.png" alt="Pronto? Soccorso Vicino">
+      <div class="content">
+        <div class="badge-row">
+          <span class="badge">免费</span>
+          <span class="badge soon">应用商店上架 — 即将推出</span>
+        </div>
+        <h3>Pronto? Soccorso Vicino</h3>
+        <p>在意大利全境查找最近的急诊室——支持人用和宠物用——提供距离、预计等待时间和路线指引。还包含面向医疗专业人员的高级版块，以及为在意大利的外国游客或临时访客准备的旅行工具包。</p>
+        <a href="https://landing.sunvibestechsolutions.com" class="btn btn-primary" target="_blank" rel="noopener">了解更多</a>
+      </div>
+    </div>
+
+    <div class="tailor-card">
+      <span class="tailor-badge">即将推出</span>
+      <h3>把繁琐的工作，简化成一次点击</h3>
+      <p>每一家诊所、每一家企业都有自己独特的工作方式——而"人人适用"的软件往往并不能适应这种方式，反而让工作变得更复杂。我们围绕您真实的工作方式，为您打造定制化的管理系统和应用：从您最初的想法出发，直到您尚未想到的那些需求。这不是从货架上取下、勉强改改就穿的成衣，而是根据您的尺寸量身定制的西装。</p>
+      <ul class="tailor-points">
+        <li>围绕您的工作方式打造，而不是反过来</li>
+        <li>一次点击，取代十个手动步骤</li>
+        <li>也为您尚未想到的需求而设计</li>
+      </ul>
+      <p class="tailor-example"><strong>一个具体的例子：</strong>为医疗诊所或销售型企业打造的预约管理系统，把如今繁琐的流程，变成一次点击就能完成的操作。<strong>另一个例子：</strong>为药店打造的客户应用（或内部管理系统），用于预约取药、发送自动提醒，并与每天信赖您的顾客保持联系。</p>
+      <p class="tailor-note">本区块将在首批项目准备就绪后更新。</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="publishing">
+  <div class="section-inner">
+    <div class="eyebrow">数字出版</div>
+    <h2>小型数字出版业务</h2>
+    <p>除了应用程序，Sunvibes Tech Solutions 还编写实用指南，帮助家庭和专业人士理性地使用技术。这些指南属于 <strong>Passo Passo</strong>（循序渐进）系列：简短、实用、通俗易懂，并附有可核实的资料来源。</p>
+    <div class="tailor-card">
+      <span class="tailor-badge">2027年7月登陆 Amazon Kindle · 意大利语和英语版</span>
+      <h3>Passo Passo 系列 · 首批4本</h3>
+      <div class="books">
+        <div class="book"><div class="book-num">1</div><div><div class="book-kind">家长指南</div><h4>L'AI in famiglia<span class="en"> · AI in the Family</span></h4><p>在家中与人工智能相处的规则、工具与对话，循序渐进。</p></div></div>
+        <div class="book"><div class="book-num">2</div><div><div class="book-kind">随笔</div><h4>A tavola con l'AI<span class="en"> · Dining with AI</span></h4><p>人工智能如何改变家庭。</p></div></div>
+        <div class="book"><div class="book-num">3</div><div><div class="book-kind">绘本，6–10岁</div><h4>Emma e la macchina che parla<span class="en"> · Emma and the Talking Machine</span></h4><p>讲给孩子听的人工智能。</p></div></div>
+        <div class="book"><div class="book-num">4</div><div><div class="book-kind">旅行者指南</div><h4>In viaggio con l'AI<span class="en"> · Travelling with AI</span></h4><p>做好准备、健康出行、避免意外的实用指南。</p></div></div>
+      </div>
+      <p class="tailor-note">供读者免费下载的可打印资料包将在图书出版后在此提供。</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <div class="eyebrow">联系方式</div>
+    <h2>联系我们</h2>
+    <p style="color:var(--grigio);max-width:480px;margin:0 auto;">如有问题、合作意向或反馈，请通过邮件联系我们。</p>
+    <a href="mailto:info@sunvibestechsolutions.com" class="email-btn">info@sunvibestechsolutions.com</a>
+    <div class="socials">
+      <a class="social-pill" href="https://www.instagram.com/sunvibestechsolutions/" target="_blank" rel="noopener">Instagram</a>
+      <a class="social-pill" href="https://www.facebook.com/share/1Rav3YoLNh/" target="_blank" rel="noopener">Facebook</a>
+      <a class="social-pill" href="https://www.linkedin.com/company/145425853/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="social-pill" href="https://www.youtube.com/@sunvibestechsolutions" target="_blank" rel="noopener">YouTube</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 Sunvibes Tech Solutions — <a href="mailto:info@sunvibestechsolutions.com">info@sunvibestechsolutions.com</a> · <a href="privacy-en.html">隐私政策</a></div>
+</footer>
+
+<script>
+(function(){
+  var canvas = document.getElementById('matrix-rain');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var hero = canvas.closest('.hero');
+  var chars = 'アイウエオカキクケコサシスセソタチツテトナニヌネノ0123456789';
+  chars = chars.split('');
+  var fontSize = 16;
+  var columns, drops;
+
+  function resize(){
+    var w = hero.clientWidth, h = hero.clientHeight;
+    canvas.width = w * devicePixelRatio;
+    canvas.height = h * devicePixelRatio;
+    canvas.style.width = w + 'px';
+    canvas.style.height = h + 'px';
+    ctx.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
+    columns = Math.floor(w / fontSize);
+    drops = new Array(columns).fill(0).map(function(){ return Math.random() * -50; });
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  function draw(){
+    var w = canvas.width / devicePixelRatio, h = canvas.height / devicePixelRatio;
+    ctx.fillStyle = 'rgba(1,8,4,0.14)';
+    ctx.fillRect(0, 0, w, h);
+    ctx.font = fontSize + 'px monospace';
+    for (var i = 0; i < columns; i++){
+      var text = chars[Math.floor(Math.random() * chars.length)];
+      var x = i * fontSize;
+      var y = drops[i] * fontSize;
+      ctx.fillStyle = Math.random() > 0.94 ? '#d9fbe4' : '#3ddc72';
+      ctx.fillText(text, x, y);
+      if (y > h && Math.random() > 0.975){
+        drops[i] = 0;
+      }
+      drops[i]++;
+    }
+  }
+
+  var interval = setInterval(draw, 55);
+
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    clearInterval(interval);
+    canvas.style.display = 'none';
+  }
+})();
+</script>
+
+</body>
+</html>
