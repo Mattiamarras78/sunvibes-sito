@@ -155,6 +155,12 @@
   .tailor-points li::before{content:"✓";position:absolute;left:0;top:0;color:var(--blu-medio);font-weight:800;}
   .tailor-example{font-size:0.95rem;color:var(--grigio);margin-bottom:10px;max-width:640px;}
   .tailor-example strong{color:var(--testo-scuro);}
+  .books{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:6px 0 18px;text-align:left;}
+  .book{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:16px;}
+  .book-num{flex:none;width:34px;height:34px;border-radius:50%;background:var(--blu-medio);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;}
+  .book-kind{font-size:0.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#ea580c;margin-bottom:2px;}
+  .book h4{font-size:1.02rem;font-weight:800;color:var(--testo-scuro);margin:0 0 4px;}
+  .book p{font-size:0.88rem;color:#475569;margin:0;}
   .tailor-note{font-size:0.85rem;color:var(--grigio);font-style:italic;margin-bottom:0;}
 
   .contact{text-align:center;}
@@ -275,15 +281,15 @@
     <h2>Una piccola attività editoriale digitale</h2>
     <p>Accanto alle app, Sunvibes Tech Solutions realizza guide pratiche per aiutare famiglie e professionisti a vivere la tecnologia in modo consapevole. Le guide fanno parte della collana <strong>Passo Passo</strong>: brevi, concrete, senza tecnicismi, con fonti verificabili.</p>
     <div class="tailor-card">
-      <span class="tailor-badge">In arrivo — gennaio 2027 su Amazon Kindle</span>
-      <h3>L'IA in famiglia</h3>
-      <p>Una guida per genitori di bambini e ragazzi tra i 6 e i 16 anni: come l'intelligenza artificiale entra in casa, come parlarne con i figli e quali regole darsi insieme.</p>
-      <ul class="tailor-points">
-        <li>Giochi da fare in famiglia dopo ogni capitolo</li>
-        <li>Un patto digitale di famiglia da firmare insieme</li>
-        <li>Leggi e dati con fonti verificabili</li>
-      </ul>
-      <p class="tailor-note">Il kit stampabile gratuito per i lettori sarà disponibile qui all'uscita del libro.</p>
+      <span class="tailor-badge">In arrivo — luglio 2027 su Amazon Kindle</span>
+      <h3>Collana Passo Passo · i primi 4 volumi</h3>
+      <div class="books">
+        <div class="book"><div class="book-num">1</div><div><div class="book-kind">Guida per genitori</div><h4>L'AI in famiglia</h4><p>Regole, strumenti e conversazioni per vivere l'intelligenza artificiale in casa, passo passo.</p></div></div>
+        <div class="book"><div class="book-num">2</div><div><div class="book-kind">Saggio</div><h4>A tavola con l'AI</h4><p>Come l'intelligenza artificiale sta cambiando la famiglia.</p></div></div>
+        <div class="book"><div class="book-num">3</div><div><div class="book-kind">Libro illustrato, 6–10 anni</div><h4>Emma e la macchina che parla</h4><p>L'intelligenza artificiale spiegata ai bambini.</p></div></div>
+        <div class="book"><div class="book-num">4</div><div><div class="book-kind">Guida per viaggiatori</div><h4>In viaggio con l'AI</h4><p>Guida pratica per partire preparati, in salute e senza brutte sorprese.</p></div></div>
+      </div>
+      <p class="tailor-note">Anche in inglese, nella collana Step by Step. Il kit stampabile gratuito per i lettori sarà disponibile qui all'uscita dei libri.</p>
     </div>
   </div>
 </section>
